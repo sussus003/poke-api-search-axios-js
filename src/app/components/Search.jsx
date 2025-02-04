@@ -39,7 +39,7 @@ function Search() {
           onKeyDown={(e)=> onKeyDown(e)}
         />
         <input
-          className="bg-slate-400 m-2 py-2 px-3 rounded-md"
+          className="bg-slate-400 m-2 py-2 px-3 rounded-md hover:cursor-pointer"
           type="submit"
           value="Search"
           onClick={fetchPokemon}
