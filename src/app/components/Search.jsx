@@ -20,6 +20,12 @@ function Search() {
 
   console.log("Pokemon :", pokemon ? pokemon : "Nothing");
 
+  const onKeyDown =(e) => {
+    if(e.key=="Enter"){
+      fetchPokemon();
+    }
+  }
+
   return (
     <div className="container mx-auto my-10 flex justify-center">
       <div className="items-center">
@@ -30,6 +36,7 @@ function Search() {
           id="search"
           placeholder="Search Pokemon"
           onChange={(e) => setPokemon(e.target.value)}
+          onKeyDown={(e)=> onKeyDown(e)}
         />
         <input
           className="bg-slate-400 m-2 py-2 px-3 rounded-md"
